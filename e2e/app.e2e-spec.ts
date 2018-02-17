@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('angular-tour-of-heroes App', () => {
+describe('ngBucketz App', () => {
   let page: AppPage;
 
   beforeEach(() => {

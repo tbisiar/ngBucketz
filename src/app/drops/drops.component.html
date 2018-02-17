@@ -1,0 +1,13 @@
+
+<div>
+  <h2>My Drops</h2>
+  <ul class="drops">
+    <li *ngFor="let drop of drops"
+        [class.selected]="drop === selectedDrop"
+        (click)="onSelect(drop)">
+      <span class="badge">{{drop.id}}</span> {{drop.name}}
+    </li>
+  </ul>
+</div>
+<app-drop-detail [drop]="selectedDrop"></app-drop-detail>
+
