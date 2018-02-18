@@ -15,4 +15,8 @@ export class DropService {
     return of(DROPS);
   }
 
+  getDrop(id: number): Observable<Drop> {
+    this.messageService.add(`DropsService: fetched drop id=${id}`);
+    return of(DROPS.find(drop => drop.id === id));
+  }
 }

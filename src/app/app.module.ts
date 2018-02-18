@@ -9,6 +9,8 @@ import { DropDetailComponent } from './drop-detail/drop-detail.component';
 import { DropService } from './drop.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -16,11 +18,13 @@ import { MessageService } from './message.service';
     AppComponent,
     DropsComponent,
     DropDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     DropService,

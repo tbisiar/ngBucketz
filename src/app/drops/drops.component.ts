@@ -9,17 +9,12 @@ import { DropService } from '../drop.service';
 })
 export class DropsComponent implements OnInit {
 
-  selectedDrop: Drop;
-  drops = Drop;
+  drops = Drop[new Drop()];
 
   constructor(private dropService: DropService) { }
 
   ngOnInit() {
     this.getDrops();
-  }
-
-  onSelect(drop: Drop): void {
-    this.selectedDrop = drop;
   }
 
   getDrops(): void {

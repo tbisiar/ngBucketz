@@ -2,12 +2,11 @@
 <div>
   <h2>My Drops</h2>
   <ul class="drops">
-    <li *ngFor="let drop of drops"
-        [class.selected]="drop === selectedDrop"
-        (click)="onSelect(drop)">
-      <span class="badge">{{drop.id}}</span> {{drop.name}}
+    <li *ngFor="let drop of drops">
+      <a routerLink="/detail/{{drop.id}}">
+        <span class="badge">{{drop.id}}</span> {{drop.name}}
+      </a>
     </li>
   </ul>
 </div>
 <app-drop-detail [drop]="selectedDrop"></app-drop-detail>
-
